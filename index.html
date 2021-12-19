@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset = "UTF-8">
+    <title>Ayudas de Memoria</title>
+    <style>
+        body{
+/*            if the first option (arial in this case) is not available, the browser will take the next one available.*/
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        p {
+            color:darkcyan
+        }
+        ul {
+            list-style-image: url('Images/L.gif');
+        }
+        
+        #scroll_block {
+            background-color: pink;
+            padding: 20px 10px;
+            overflow: scroll;
+/*           Id there are two numbers, the first number refers to top and bottom, and the second number refers to left and right.
+            If there are three numbers, the first number is the top, the second one will refer to left and right sides, and the third one will be the bottom.
+            If there are four numbers, the order in wich it is interpreted starts from the top and goes clockwise. (top, right, bottom, left)
+            */
+        }
+        
+        div {
+            width: 500px;
+            height: 200px;
+            }
+        
+        img {
+            padding:0px;
+        }
+
+        
+        #position_text {
+/*           position "relative" tells "top, left, right and bottom" to move the element relative to its current position in the browser, while "absolute" tells the instruccion to move the element relative to its closest parent element (if non of the parents have a position, it will measure from the body), and "fixed" works like "absolute" but also tells the element to mantaint its position at all times*/
+            position:relative;
+            top:100px;
+            left:10px;
+        }
+        
+    </style>
+    
+    <link rel="stylesheet" href="CSS/style.css">
+<!--    it is possible to use a link from "www.google.com/fonts" as a href instead-->
+
+    <script src="JS/javascript.js">  </script>
+    
+</head>
+
+<body>
+    <h1>Lorem Ipsum</h1> 
+        <a href="https://es.lipsum.com/" target="_blank">
+<!--            it is best to specify both width and hight, so that the page loads faster          
+                the "alt" atribute is also usefull to specify what the image represents in case
+                it loads slow or is inaccesible for a given user  
+                the "figcaption" atribute allow us to skip the "alt" atribute                       -->
+            
+            <img src="Images/loremipsum.jpg" width="200">
+                
+        </a>
+    <figcaption>A "lorem ipsum" image</figcaption>
+    <h2>Dolor sit amet</h2>
+    <a href="#contact_section">Go To Contact</a>
+    <!--    it is also possible to target a specific place of another page, for example using href="examplepage.html#contact_section"-->
+    <h3>Consectetur</h3>
+    <h4>Adipiscing elit</h4> 
+    <h5 id="headingFive">Sed eiusmod tempor</h5>
+    
+<!--
+    section tag would insert a longer pause between the section and next topic
+    article tag is similar but indicates the content inside does not need to reference other content of the page 
+-->
+	<section>
+	<h6 class="headingSix">Incidunt ut labore</h6>
+<!--        1.5em equals 150% and both inherit from parent. "rem" property inherits from html tag instead-->
+    <p style="font-size:1.5em";>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam mi, condimentum ac libero at, ultrices finibus nibh. Aenean ac ligula ipsum. Donec nec egestas lacus. Etiam accumsan ac libero at ultricies. Ut orci lectus, egestas vel sapien et, porttitor vehicula urna. Vestibulum mollis interdum ligula id semper. Ut sit amet rutrum tortor, vel fringilla eros. In sodales, leo sed elementum tristique, quam lectus tristique erat, ut vestibulum lectus sapien vitae nibh. Etiam vitae nisi porta, consequat nisl tempor, finibus ligula. Morbi at nisl cursus, vulputate nulla finibus, viverra lectus. Pellentesque ut orci vitae est consectetur ultricies. Vivamus pretium, est blandit fringilla porttitor, quam libero maximus est, non ultrices nisi sem quis orci. Suspendisse vel dolor consectetur, pharetra erat semper, consequat turpis. Praesent vitae nunc condimentum, finibus velit eget, fermentum augue. Donec semper eleifend tempor.
+
+        Curabitur pharetra ante ac dapibus congue. Pellentesque vitae felis non dolor aliquet rhoncus. Aliquam pretium mauris erat. Phasellus eleifend facilisis mattis. Donec sed eros sit amet nibh vulputate posuere. Maecenas volutpat lacinia consequat. In maximus, libero ut ullamcorper ullamcorper, nibh mi porttitor libero, eu venenatis purus sapien eget mi. Maecenas aliquet ligula nulla, eu ornare eros pulvinar sed.
+
+        Fusce posuere varius nulla at posuere.
+	</p>
+	</section>
+	
+    
+    <!-- this is a comment. To comment, use CTRL + / -->
+    
+        
+        <blockquote style="color:blue">Lorem ipsum dolor sit amet, <strong>consectetur</strong> <b>adipiscing elit</b>, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. </blockquote>
+            
+
+        
+        <hr>
+            <p style="color: #ffcc99; font-size:30px; font-weight: bold">
+        Ut enim ad minim veniam, <em>quis nostrud</em> <i>exercitation</i> ullamco laboris nisi ut aliquid ex ea commodi consequat. 
+            </p>
+        <hr>
+        <p>
+        Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+        </p>
+        <br>
+        
+        <div id=excepteur style="text-align:center;font-weight: bold">
+        <p>
+        Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        </div>
+        <p style="text-align:justify">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam mi, condimentum ac libero at, ultrices finibus nibh. Aenean ac ligula ipsum. Donec nec egestas lacus. Etiam accumsan ac libero at ultricies. Ut orci lectus, egestas vel sapien et, porttitor vehicula urna. Vestibulum mollis interdum ligula id semper. Ut sit amet rutrum tortor, vel fringilla eros. In sodales, leo sed elementum tristique, quam lectus tristique erat, ut vestibulum lectus sapien vitae nibh. Etiam vitae nisi porta, consequat nisl tempor, finibus ligula. Morbi at nisl cursus, vulputate nulla finibus, viverra lectus. Pellentesque ut orci vitae est consectetur ultricies. Vivamus pretium, est blandit fringilla porttitor, quam libero maximus est, non ultrices nisi sem quis orci. Suspendisse vel dolor consectetur, pharetra erat semper, consequat turpis. Praesent vitae nunc condimentum, finibus velit eget, fermentum augue. Donec semper eleifend tempor.
+
+        Curabitur pharetra ante ac dapibus congue. Pellentesque vitae felis non dolor aliquet rhoncus. Aliquam pretium mauris erat. Phasellus eleifend facilisis mattis. Donec sed eros sit amet nibh vulputate posuere. Maecenas volutpat lacinia consequat. In maximus, libero ut ullamcorper ullamcorper, nibh mi porttitor libero, eu venenatis purus sapien eget mi. Maecenas aliquet ligula nulla, eu ornare eros pulvinar sed.
+
+        Fusce posuere varius nulla at posuere. Nam ultrices nunc vitae leo pharetra molestie. Fusce sollicitudin finibus lacinia. Morbi vitae tortor dapibus, condimentum ipsum eu, congue diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce gravida posuere sem, ut dictum nulla. Donec dictum ultricies nulla, ut hendrerit justo auctor ac. Duis vestibulum, ligula non placerat feugiat, velit lacus dignissim lectus, non congue purus elit ac ante. Donec faucibus ullamcorper eros nec porta. Aenean consectetur pretium est, eget laoreet arcu interdum a. Sed augue nisl, egestas vel iaculis vel, ultricies quis nunc. Curabitur nec tellus a felis aliquet blandit id et turpis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus dolor tortor, vehicula sit amet malesuada vitae, hendrerit at nulla. Vivamus et purus ut tellus volutpat gravida quis a orci. Vivamus condimentum lectus porttitor metus iaculis, non aliquam magna sagittis.
+
+        Praesent lectus enim, ultricies sit amet mi iaculis, cursus ullamcorper ipsum. Nunc ac commodo mauris. Quisque pulvinar convallis dapibus. Integer dignissim condimentum nunc suscipit sollicitudin. In hac habitasse platea dictumst. Integer placerat feugiat neque nec tincidunt. In ut massa sed nibh semper sollicitudin. Proin elementum lectus sed dolor porttitor cursus. Curabitur quis tellus turpis. Nunc orci felis, ullamcorper id libero eget, commodo vehicula sem. Praesent ut rhoncus ante. Etiam quis mi feugiat, venenatis turpis a, luctus risus.
+
+        Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas ac bibendum velit. Curabitur eget scelerisque orci. Nam ut condimentum libero. Nulla pharetra nisi ac mauris maximus, vel lobortis ipsum lacinia. Nullam eu diam sapien. Cras eu pretium ex. Morbi finibus metus eget turpis tempor, a fermentum mi dapibus. Curabitur molestie orci ut leo hendrerit molestie. Aliquam pellentesque facilisis est nec aliquam.
+    </p>
+    
+    <a href="https://www.w3schools.com/colors/colors_picker.asp" target="_blank">COLORES</a>
+<!--    rgba color works as rgb but we can set transparency with the 'a' value, wich goes from '0' to '1'. for example, with 256,0,0,.5 and a white background, we get a pink color-->
+    <br><br>
+    <a href="Images/loremipsum.jpg" target="_blank">IMAGEN JPG</a>
+    <br><br>
+    <a href="Images/image.html" target="_blank">IMAGEN HTML</a>
+    
+    <p>
+    <input type="text" placeholder="Enter Name">     
+    </p>    
+    <p>
+    <input type="email" placeholder="Enter e-mail">
+    </p>
+    <p>
+    <input type="password" placeholder="Enter password">
+    </p>
+    <p>
+    <input type="file">
+    </p>
+    <p>
+    <input type="submit">
+    </p>
+     
+    <div>
+    <ul>
+    <li>Sit</li>
+    <li>Amet</li>
+    </ul>
+    </div>        
+            
+    <ol>
+		<li>Lorem</li>
+		<li>Ipsum</li>
+		<li>Dolor</li>
+    </ol>
+	<ol type="A">
+		<li>Lorem</li>
+		<li>Ipsum</li>
+		<li>Dolor</li>
+    </ol>
+    
+    
+    
+    <a href="https://www.w3schools.com/HTML/html_lists.asp" target="_blank">TAG LIST</a>
+    
+    <br><br>
+    
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MOZILLA HTML GUIDE</a>
+            
+    <br><br>
+            
+    <a href=https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference target="_blank">MOZILLA CSS PROPERTIES</a>
+            
+    <br><br>        
+            
+            
+    <p id=marco>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam mi, condimentum ac libero at, ultrices finibus nibh. Aenean ac ligula ipsum. Donec nec egestas lacus. Etiam accumsan ac libero at ultricies. Ut orci lectus, egestas vel sapien et, porttitor vehicula urna. Vestibulum mollis interdum ligula id semper.
+    </p>
+            
+            <br><br><br><br><br>
+            <br><br><br><br><br>
+            <br><br><br><br><br>
+            
+    <h2 id="page-title" style="text-align: center">
+    Picture Practice        
+    </h2>
+    
+    <div id="picture-container">
+            
+<!--        the float property would make the image float left or rigth of the page, while the clear property would indicate how the non floating elements will wrap arround the non floating ones-->
+        <img id="image" src="Images/loremipsum.jpg" alt="">
+        
+        
+    </div>
+          
+    <br>
+            
+    <div id="picture-css">
+            
+            
+    </div>
+            
+    <br>
+            
+    <div id="hovers">
+            
+    <h2 style=font-weight:bold>
+        <br><br>
+    LOREM <br>IPSUM!    
+    </h2>       
+            
+    </div>
+            
+            
+    <a id="contact_section" href="mailto: fedesapuppo@hotmail.com?Subject=Consulta" style="text-decoration:none" onmouseover="style='text-decoration:underline'" onmouseout="style='text-decoration:none'">Contanct Us</a>
+    
+    <div id="scroll_block">
+    <h1>Lorem Ipsum</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam mi, condimentum ac libero at, ultrices finibus nibh. Aenean ac ligula ipsum. Donec nec egestas lacus. Etiam accumsan ac libero at ultricies. Ut orci lectus, egestas vel sapien et, porttitor vehicula urna. Vestibulum mollis interdum ligula id semper. Ut sit amet rutrum tortor, vel fringilla eros.
+        </p>
+    </div>
+            
+    <div id="position_text">
+
+        <p>
+        Lorem Ipsum Bottom Left
+        </p>
+
+    </div>
+        
+    
+    
+    </body>
+</html>
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
